@@ -1,8 +1,6 @@
 package com.alexeyKasturo
 
 import android.content.Context
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.util.AttributeSet
 import android.view.*
 import android.widget.PopupWindow
@@ -52,22 +50,19 @@ class DropdownPopup<T : Any>(
             popupWindow.dismiss()
         }
         adapter = TextPopupAdapter(items, mapToString, onClick)
-        val root = createRecycleView(context)
-        val recyclerView = root.findViewById<RecyclerView>(R.id.recycler_view)
+        val recyclerView = createRecycleView(context)
         recyclerView.adapter = adapter
 
 
-        popupWindow.contentView = root
+        popupWindow.contentView = recyclerView
         PopupWindowCompat.setOverlapAnchor(popupWindow, false)
-        popupWindow.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
         calculateWidthHeight()
         popupWindow.height = height
         popupWindow.width = width
         popupWindow.isFocusable = true
 
         popupWindow.isClippingEnabled = false
-
-
 
         popupWindow.showAsDropDown(anchor, 0, yOffSetIn, Gravity.START)
     }
@@ -88,9 +83,9 @@ class DropdownPopup<T : Any>(
         height = popupWindow.getMaxAvailableHeight(anchor) - yOffSetOut
     }
 
-    private fun createRecycleView(context: Context): View {
+    private fun createRecycleView(context: Context): RecyclerView {
         val root: ViewGroup = anchor.rootView as ViewGroup
         return LayoutInflater.from(context)
-            .inflate(R.layout.dropdown_list, root, false)
+            .inflate(R.layout.dropdown_list, root, false) as RecyclerView
     }
 }

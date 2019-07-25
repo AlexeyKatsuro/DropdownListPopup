@@ -3,7 +3,6 @@ package com.alexeyKasturo
 import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
-import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -15,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView
 import by.lwo.trafficpolice.ui.widgets.CustomListPopup
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.item_text.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,11 +22,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         button.setOnClickListener {
-            val  intent = Intent(this, ScrollActivity::class.java)
+            val intent = Intent(this, ScrollActivity::class.java)
             startActivity(intent)
         }
 
-        val COUNTRIES =  MutableList(10){
+        val COUNTRIES = MutableList(10) {
             "Item $it"
         }
         val adapter = ArrayAdapter(
@@ -62,7 +60,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun TextInputLayout.setTextListener() {
-        val list = MutableList(10){
+        val list = MutableList(10) {
             "Item $it"
         }
         setEndIconOnClickListener {

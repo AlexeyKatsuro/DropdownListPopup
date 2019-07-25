@@ -7,21 +7,11 @@ import android.graphics.drawable.Drawable
 import android.os.Handler
 import android.util.AttributeSet
 import android.util.Log
-import android.view.Gravity
-import android.view.KeyEvent
-import android.view.MotionEvent
-import android.view.View
+import android.view.*
 import android.view.View.MeasureSpec
 import android.view.View.OnTouchListener
-import android.view.ViewGroup
-import android.view.WindowManager
-import android.widget.AbsListView
-import android.widget.AdapterView
+import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
-import android.widget.LinearLayout
-import android.widget.ListAdapter
-import android.widget.ListView
-import android.widget.PopupWindow
 import androidx.annotation.AttrRes
 import androidx.annotation.RestrictTo
 import androidx.annotation.RestrictTo.Scope.LIBRARY_GROUP_PREFIX
@@ -1035,7 +1025,7 @@ open class CustomListPopup
 
                 hintParams = hintView.layoutParams as LinearLayout.LayoutParams
                 otherHeights = (hintView.measuredHeight + hintParams.topMargin
-                    + hintParams.bottomMargin)
+                        + hintParams.bottomMargin)
 
                 dropDownView = hintContainer
             }
@@ -1047,7 +1037,7 @@ open class CustomListPopup
             if (view != null) {
                 val hintParams = view.layoutParams as LinearLayout.LayoutParams
                 otherHeights = (view.measuredHeight + hintParams.topMargin
-                    + hintParams.bottomMargin)
+                        + hintParams.bottomMargin)
             }
         }
 
