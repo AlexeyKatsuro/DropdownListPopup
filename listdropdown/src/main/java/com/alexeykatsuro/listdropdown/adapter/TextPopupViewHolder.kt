@@ -3,7 +3,7 @@ package com.alexeyKasturo.util
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.alexeyKasturo.R
+import com.alexeykatsuro.listdropdown.R
 
 class TextPopupViewHolder<T : Any>(view: View) : RecyclerView.ViewHolder(view) {
 

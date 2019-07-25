@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import by.lwo.trafficpolice.ui.widgets.CustomListPopup
+import com.alexeykatsuro.listdropdown.DropdownPopup
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -78,12 +79,3 @@ fun RecyclerView.setDividerItemDecoration() {
     addItemDecoration(dividerItemDecoration)
 }
 
-val Float.toDp: Float
-    get() = (this / Resources.getSystem().displayMetrics.density)
-val Float.toPx: Float
-    get() = (this * Resources.getSystem().displayMetrics.density)
-
-val Int.toDp: Int
-    get() = (this / Resources.getSystem().displayMetrics.density).toInt()
-val Int.toPx: Int
-    get() = (this * Resources.getSystem().displayMetrics.density).toInt()

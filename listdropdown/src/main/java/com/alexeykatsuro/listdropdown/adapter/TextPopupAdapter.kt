@@ -3,7 +3,7 @@ package com.alexeyKasturo.util
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.alexeyKasturo.R
+import com.alexeykatsuro.listdropdown.R
 
 class TextPopupAdapter<I : Any>(
     private val items: List<I>,
