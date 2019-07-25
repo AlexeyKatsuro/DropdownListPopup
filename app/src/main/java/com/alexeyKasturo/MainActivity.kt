@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import by.lwo.trafficpolice.ui.widgets.CustomListPopup
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_text.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -66,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         }
         setEndIconOnClickListener {
             DropdownPopup(this@MainActivity, this, list) { index: Int, item: String ->
-                Toast.makeText(this@MainActivity, "i: $index, $item", Toast.LENGTH_SHORT).show()
+                this.editText?.setText(item)
             }
         }
     }
@@ -83,3 +84,8 @@ val Float.toDp: Float
     get() = (this / Resources.getSystem().displayMetrics.density)
 val Float.toPx: Float
     get() = (this * Resources.getSystem().displayMetrics.density)
+
+val Int.toDp: Int
+    get() = (this / Resources.getSystem().displayMetrics.density).toInt()
+val Int.toPx: Int
+    get() = (this * Resources.getSystem().displayMetrics.density).toInt()

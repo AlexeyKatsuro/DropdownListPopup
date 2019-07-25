@@ -8,4 +8,20 @@
         <item name="colorSecondary">@color/colorAccent</item>
     </style>
 
+    <style name="Widget.MyApp.MaterialCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.MaterialCardView</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.MaterialCardView" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeBottomLeft">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+    </style>
+
 </resources>
